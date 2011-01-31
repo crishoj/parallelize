@@ -1,0 +1,19 @@
+Speed up (sequential and associative) processing of large files by processing chunks in parallel.
+
+== SYNOPSIS
+
+    parallelize stdout --chunks=N -- CMD [--CMD-OPTS] [CMD-ARGS] {INPUT}
+
+== OPTIONS
+
+    --output OUTFILE
+        Where to place the output
+
+    --chunks N
+        Number of chunks (and jobs to execute in parallel)
+
+    --granularity N
+        Ensure the number of lines in each chunk is divisible by N (useful for block-structured data)
+
+    --nice N
+        Run the jobs with niceness N to be less of a CPU hog
